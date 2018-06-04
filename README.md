@@ -3,3 +3,4 @@
 > **目录**
 
  - 1.Android权限之通知、自启动跳转
+ - 2.Fragment中OnHiddenChange()、setUserVisibleHint()方法
