@@ -81,9 +81,9 @@ public void onActivityCreated(@Nullable Bundle savedInstanceState) {
 <p>FragmentStatePagerAdapter使用add()和remove()管理Fragment，所以缓存外的Fragment的实例不会保存在内存中，适合分页多，数据动态的情况</p>
 </blockquote>
 <h4 id="显示和隐藏">显示和隐藏</h4>
-<p>对干缓存数量外的Fragment会被detach或remove，我们可以根据其常规生命周期进行开发，但是缓存数量内的显隐并不会影响生命周期，我们可以通过setUserVisableHint()方法来拍段某个Fragment是否显示。<br>
-<img src="http://p981u1am0.bkt.clouddn.com/18-6-5/42571706.jpg" alt="Fragment+PagerAdapter，生命周期变化"><br>
-从日志中我们可以看出，缓存数量内的Fragment0和Fragment1的setUserVisableHint()方法的isVisibleToUser首先会被设置成false，然后分别进行onAttach() - onResume()的生命周期，其中需要显示的Fragment在onCreate()之后，会将isVisibleToUser置为true，然后显示出来。<br>
+<p>对干缓存数量外的Fragment会被detach或remove，我们可以根据其常规生命周期进行开发，但是缓存数量内的显隐并不会影响生命周期，我们可以通过setUserVisableHint()方法来拍段某个Fragment是否显示。</p>
+<p><img src="http://p981u1am0.bkt.clouddn.com/18-6-5/42571706.jpg" alt="Fragment+PagerAdapter，生命周期变化"></p>
+<p>从日志中我们可以看出，缓存数量内的Fragment0和Fragment1的setUserVisableHint()方法的isVisibleToUser首先会被设置成false，然后分别进行onAttach() - onResume()的生命周期，其中需要显示的Fragment在onCreate()之后，会将isVisibleToUser置为true，然后显示出来。<br>
 注意：<strong>由此可见setUserVisibleHint()有可能在onAttach()之前调用，并且到显示前可能调用2次。</strong></p>
 <p>再之后的显隐就是设置isVisibleToUser并回调通知了。和上文中的onHiddenChanged()一样，显隐状态没有变化时，也是不会回调的。</p>
 
