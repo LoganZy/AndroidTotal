@@ -82,9 +82,9 @@ public void onActivityCreated(@Nullable Bundle savedInstanceState) {
 </blockquote>
 <h4 id="显示和隐藏">显示和隐藏</h4>
 <p>对干缓存数量外的Fragment会被detach或remove，我们可以根据其常规生命周期进行开发，但是缓存数量内的显隐并不会影响生命周期，我们可以通过setUserVisableHint()方法来拍段某个Fragment是否显示。<br>
-<img src="http://p981u1am0.bkt.clouddn.com/18-6-5/42571706.jpg" alt="Fragment+PagerAdapter，生命周期变化"></p>
+<img src="http://p981u1am0.bkt.clouddn.com/18-6-5/42571706.jpg" align="center" alt="Fragment+PagerAdapter，生命周期变化"></p>
 <div align="center">  
-<img src="http://p981u1am0.bkt.clouddn.com/18-6-5/42571706.jpg" alt="Fragment+PagerAdapter，生命周期变化">
+<img src="http://p981u1am0.bkt.clouddn.com/18-6-5/42571706.jpg"  alt="Fragment+PagerAdapter，生命周期变化">
 ![Fragment+PagerAdapter，生命周期变化](http://p981u1am0.bkt.clouddn.com/18-6-5/42571706.jpg)  
 </div>
 从日志中我们可以看出，缓存数量内的Fragment0和Fragment1的setUserVisableHint()方法的isVisibleToUser首先会被设置成false，然后分别进行onAttach() - onResume()的生命周期，其中需要显示的Fragment在onCreate()之后，会将isVisibleToUser置为true，然后显示出来。
