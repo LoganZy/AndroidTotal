@@ -15,6 +15,7 @@
  * @param hidden True if the fragment is now hidden, false otherwise.  
  */
  public void onHiddenChanged(boolean hidden) {  
+ 
  }
 </code></pre>
 <p>查看onHidden Change()源码，可以看出，触发执行条件是fragment状态改变，是否可见。由isHidden()方法决定。</p>
@@ -26,7 +27,7 @@
  * must be both started and not hidden.
  */
  final public boolean isHidden() {  
-  return mHidden;  
+     return mHidden;  
  }
 </code></pre>
 <p>如果该Fragment对象已经被隐藏，那么它返回true。默认情况下，Fragment是被显示的。能够用onHiddenChanged(boolean)回调方法获取该Fragment对象状态的改变，要注意的是隐藏状态与其他状态是正交的—也就是说，要把该Fragment对象显示给用户，Fragment对象必须是被启动并不被隐藏(显示)。</p>
