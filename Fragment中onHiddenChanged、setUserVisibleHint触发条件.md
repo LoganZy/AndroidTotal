@@ -14,8 +14,7 @@
  * be called whenever the fragment changes state from that. 
  * @param hidden True if the fragment is now hidden, false otherwise.  
  */
- public void onHiddenChanged(boolean hidden) {  
- 
+ public void onHiddenChanged(boolean hidden) { 
  }
 </code></pre>
 <p>查看onHidden Change()源码，可以看出，触发执行条件是fragment状态改变，是否可见。由isHidden()方法决定。</p>
