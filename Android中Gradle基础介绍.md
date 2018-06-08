@@ -1,3 +1,4 @@
+# Android中Gradle基础介绍
 Gradle是一个不断迭代的工具，往往在一个新版本的使用上会打破向后兼容问题，这时候使用`Gradle Wrapper`可以避免这个问题，并且能够保证构建是可重复的。  
 
 Grdle Wrapper分别为各个操作系统提供了执行工具，Windows上是一个batch文件，而Linux/Unix是一个shell脚本。当运行这个脚本的时候，所需要的Gradle版本会自动下载到本地，当然如果已经下载过了，他就会直接使用该版本的Gradle进行构建工作。Gradle Wrapper存在的意义就是它可以不借助开发者机器或者自构建系统依然可以运行Wrapper，然后由Wrapper搞定剩余的部分。因此，在开发者的机器上或者构建服务器上没有安装正确的Gradle依然可以通过Wrapper进行构建。此外，Gradle还建议把Wrapper文件添加到你的版本控制系统中。
