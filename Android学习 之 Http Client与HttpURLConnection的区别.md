@@ -3,7 +3,7 @@
 
 ---
 
-<h1 id="android学习-之-http-client与httpurlconnection的区别">Android学习 之 Http Client与HttpURLConnection的区别</h1>
+<h1 id="android学习之httpclient与httpurlconnection的区别">Android学习之HttpClient与HttpURLConnection的区别</h1>
 <p>文章转载自<a href="https://www.jianshu.com/p/a32d6980227b">https://www.jianshu.com/p/a32d6980227b  </a></p>
 <p>很多Android初学者在接触到Http协议的时候，估计都会在选择HttpClient还是HttpURLConnection之间，这两个都是Android中包含的Http客户端类。那么，这两个有什么区别呢？<br>
 　　咳，其实在之前对我而言并没有区别，因为我平时都是用的开源框架比如Async-http-client。<br>
