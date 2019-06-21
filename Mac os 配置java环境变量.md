@@ -24,9 +24,15 @@ export JAVA_HOME
 export PATH
 export CLASSPATH
 </code></pre>
-保存编辑完的文件，在terminal中输入命令，使配置生效<pre><code>4. source .bash_profile
+<blockquote>
+<p>保存编辑完的文件，在terminal中输入命令，使配置生效</p>
+</blockquote>
+<pre><code>4. source .bash_profile
 </code></pre>
-之后运行java -verison 查看版本号和其他信息，成功信息如下：<pre><code>java version "1.8.0_212"
+<blockquote>
+<p>之后运行java -verison 查看版本号和其他信息，成功信息如下：</p>
+</blockquote>
+<pre><code>java version "1.8.0_212"
 Java(TM) SE Runtime Environment (build 1.8.0_212-b10)
 Java HotSpot(TM) 64-Bit Server VM (build 25.212-b10, mixed mode)
 </code></pre>
