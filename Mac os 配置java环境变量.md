@@ -7,7 +7,7 @@
 <ol>
 <li>下载java的jdk安装包，前往<a href="https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html">Oracle</a>下载</li>
 <li>下载完成后进行安装,Mac会默认安装到:资料库/Java/JavaVirtualMachines/jdk1.8.0_212.jdk，找打jdk的根目录，并复制路径<code>/Library/Java/JavaVirtualMachines/jdk1.8.0_212.jdk/Contents/Home</code></li>
-<li>打开terminal，运行如下命令<pre><code>//切换到home顶级目录
+<li>打开terminal，运行如下命令<pre><code>//切换到home顶级目录
 1.cd ~
 //如果你是第一次配置环境变量，创建一个.bash_profile的隐藏配置文件
 2.touch .bash_profile
