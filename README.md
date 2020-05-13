@@ -3,6 +3,8 @@
 
 ---
 
+<hr>
+<hr>
 <h1 id="androidtotal">AndroidTotal</h1>
 <h2 id="一些android项目开发中的知识累积">一些Android项目开发中的知识累积</h2>
 <blockquote>
