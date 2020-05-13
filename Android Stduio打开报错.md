@@ -1,7 +1,11 @@
-## Android Stduio不能正常打开，报错
-**报错信息**
-```
- Internal error. Please report to http://code.google.com/p/android/issues
+---
+
+
+---
+
+<h2 id="android-stduio不能正常打开，报错">Android Stduio不能正常打开，报错</h2>
+<p><strong>报错信息</strong></p>
+<pre><code> Internal error. Please report to http://code.google.com/p/android/issues
 
 java.lang.RuntimeException: com.intellij.ide.plugins.PluginManager$StartupAbortedException: Fatal error initializing 'com.intellij.util.indexing.FileBasedIndex'
     at com.intellij.idea.IdeaApplication.run(IdeaApplication.java:159)
@@ -47,8 +51,8 @@ Caused by: java.lang.RuntimeException: java.io.FileNotFoundException: C:\Users\U
     ... 30 more
 Caused by: java.io.FileNotFoundException: C:\Users\UserName\.AndroidStudio\system\index\todoindex\TodoIndex.ver (The system cannot find the path specified)
     at java.io.FileOutputStream.open(Native Method)
-    at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
-    at java.io.FileOutputStream.<init>(FileOutputStream.java:162)
+    at java.io.FileOutputStream.&lt;init&gt;(FileOutputStream.java:213)
+    at java.io.FileOutputStream.&lt;init&gt;(FileOutputStream.java:162)
     at com.intellij.util.indexing.IndexInfrastructure$1.execute(IndexInfrastructure.java:95)
     at com.intellij.util.indexing.IndexInfrastructure$1.execute(IndexInfrastructure.java:90)
     at com.intellij.openapi.util.io.FileUtilRt.doIOOperation(FileUtilRt.java:517)
@@ -56,19 +60,18 @@ Caused by: java.io.FileNotFoundException: C:\Users\UserName\.AndroidStudio\syste
     at com.intellij.util.indexing.FileBasedIndexImpl.registerIndexer(FileBasedIndexImpl.java:390)
     at com.intellij.util.indexing.FileBasedIndexImpl.initExtensions(FileBasedIndexImpl.java:290)
     ... 32 more
-```
-这种错误情况，还是比较罕见的，我也是在一次运行app崩溃后，导致AS自动关闭，再次打开就出现这个错误。
+</code></pre>
+<p>这种错误情况，还是比较罕见的，我也是在一次运行app崩溃后，导致AS自动关闭，再次打开就出现这个错误。</p>
+<p><strong>解决方案：</strong><br>
+这个bug在<code>Androids open source bug tracker</code>上，已经有解决方案，<a href="https://code.google.com/p/android/issues/detail?id=74458">https://code.google.com/p/android/issues/detail?id=74458</a> 在这里有详细的介绍。下面贴出被采取最多的意见：</p>
+<pre><code>This Works without the loss any settings or project. It will take you to your previous state at the time of editing an open file.  
 
-**解决方案：**
-这个bug在`Androids open source bug tracker`上，已经有解决方案，[https://code.google.com/p/android/issues/detail?id=74458](https://code.google.com/p/android/issues/detail?id=74458) 在这里有详细的介绍。下面贴出被采取最多的意见：
+1. go to your home directory. ie /home/XXXXXX/.AndroidStudio.X.X  
+2. rename the .AndroidStudio.X.X to any thing else i.e. back_up  
+3. run your android studio.  
+4. it will prompt you to import current setting or create a new version  
+5. choose the import setting and sellect the back_up directory.  
+6. Bravo You are good to go.
+</code></pre>
+<p>如果这种方法不能解决问题，可以参考这里 <a href="https://stackoverflow.com/questions/28003717/android-studio-not-starting-fatal-error-initializing-com-intellij-util-indexin">StackOverFlow</a></p>
 
-	This Works without the loss any settings or project. It will take you to your previous state at the time of editing an open file.  
-  
-	1. go to your home directory. ie /home/XXXXXX/.AndroidStudio.X.X  
-	2. rename the .AndroidStudio.X.X to any thing else i.e. back_up  
-	3. run your android studio.  
-	4. it will prompt you to import current setting or create a new version  
-	5. choose the import setting and sellect the back_up directory.  
-	6. Bravo You are good to go.
-	
-如果这种方法不能解决问题，可以参考这里 [StackOverFlow](https://stackoverflow.com/questions/28003717/android-studio-not-starting-fatal-error-initializing-com-intellij-util-indexin)
